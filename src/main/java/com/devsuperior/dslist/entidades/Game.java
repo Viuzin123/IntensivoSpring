@@ -17,26 +17,32 @@ public class Game {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String titulo;
+    private String title;
 
     @Column(name = "game_year")
-    private int ano;
-    private String genero;
-    private String plataforma;
+    private int year;
+    private String genre;
+    private String platforms;
+    private double score;
     private String imgUrl;
-    private String descricaoCurta;
-    private String descricaoLonga;
 
-    public Game(String descricaoLonga, String descricaoCurta, String imgUrl, String plataforma, String genero, int ano, String titulo, long id) {
-        this.descricaoLonga = descricaoLonga;
-        this.descricaoCurta = descricaoCurta;
-        this.imgUrl = imgUrl;
-        this.plataforma = plataforma;
-        this.genero = genero;
-        this.ano = ano;
-        this.titulo = titulo;
+    @Column (columnDefinition = "TEXT")
+    private String shortDescription;
+    @Column (columnDefinition = "TEXT")
+    private String longDescription;
+
+    public Game(long id, String title, int year, String genre, String platforms, double score, String imgUrl, String shortDescription, String longDescription) {
         this.id = id;
+        this.title = title;
+        this.year = year;
+        this.genre = genre;
+        this.platforms = platforms;
+        this.score = score;
+        this.imgUrl = imgUrl;
+        this.shortDescription = shortDescription;
+        this.longDescription = longDescription;
     }
+
     public Game() {
 
     }
@@ -49,36 +55,44 @@ public class Game {
         this.id = id;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public int getAno() {
-        return ano;
+    public int getYear() {
+        return year;
     }
 
-    public void setAno(int ano) {
-        this.ano = ano;
+    public void setYear(int year) {
+        this.year = year;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
-    public String getPlataforma() {
-        return plataforma;
+    public String getPlatforms() {
+        return platforms;
     }
 
-    public void setPlataforma(String plataforma) {
-        this.plataforma = plataforma;
+    public void setPlataform(String platforms) {
+        this.platforms = platforms;
+    }
+
+    public double getScore() {
+        return score;
+    }
+
+    public void setScore(double score) {
+        this.score = score;
     }
 
     public String getImgUrl() {
@@ -89,20 +103,20 @@ public class Game {
         this.imgUrl = imgUrl;
     }
 
-    public String getDescricaoCurta() {
-        return descricaoCurta;
+    public String getShortDescription() {
+        return shortDescription;
     }
 
-    public void setDescricaoCurta(String descricaoCurta) {
-        this.descricaoCurta = descricaoCurta;
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
     }
 
-    public String getDescricaoLonga() {
-        return descricaoLonga;
+    public String getLongDescription() {
+        return longDescription;
     }
 
-    public void setDescricaoLonga(String descricaoLonga) {
-        this.descricaoLonga = descricaoLonga;
+    public void setLongDescription(String longDescription) {
+        this.longDescription = longDescription;
     }
 
     @Override
