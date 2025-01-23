@@ -1,6 +1,6 @@
 package com.devsuperior.dslist.repositories;
 
-import com.devsuperior.dslist.entidades.Game;
+import com.devsuperior.dslist.entitys.Game;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

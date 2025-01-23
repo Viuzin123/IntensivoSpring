@@ -1,5 +1,5 @@
 package com.devsuperior.dslist.dto;
-import com.devsuperior.dslist.entidades.Game;
+import com.devsuperior.dslist.entitys.Game;
 
 public class GameMinDTO {
     private long id;

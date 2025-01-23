@@ -1,8 +1,7 @@
-package com.devsuperior.dslist.entidades;
+package com.devsuperior.dslist.entitys;
 
 import java.util.Objects;
 
-import jakarta.persistence.*;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
