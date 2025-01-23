@@ -12,3 +12,11 @@ Durante a aula aprendi sobre:
 • Padrão camadas
 • Controller, service, repository
 • Padrão DTO
+
+
+AULA 2
+Durante a aula aprendi sobre:
+• Relacionamentos N-N
+• Classe de associação, embedded id
+• Consultas SQL no Spring Data JPA
+• Projections
